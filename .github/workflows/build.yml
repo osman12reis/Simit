@@ -16,6 +16,9 @@ jobs:
           java-version: 21
       - name: Zip dosyasini ac
         run: unzip -q ./*.zip
+      - name: Guncel oyun dosyasini kullan
+        run: |
+          if [ -f game.html ]; then cp game.html simit-yagmuru-app/src/game.html; fi
       - name: Paketleri kur
         working-directory: simit-yagmuru-app
         run: |
